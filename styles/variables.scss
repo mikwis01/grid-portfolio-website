@@ -1,0 +1,23 @@
+$background-color: #0b091f;
+$border-color: rgb(255, 255, 255, 0.1);
+$basic-font-color: #fff;
+$hover-background-color: #0d0b25;
+$hover-font-color: #5e78b1;
+
+@mixin rwd-max-width($screen) {
+	@media only screen and (max-width: #{$screen + 'px'}) {
+		@content;
+	}
+}
+
+@mixin rwd-min-width($screen) {
+	@media only screen and (min-width: #{$screen + 'px'}) {
+		@content;
+	}
+}
+
+@mixin rwd-max-height($screen) {
+	@media only screen and (max-height: #{$screen + 'px'}) {
+		@content;
+	}
+}

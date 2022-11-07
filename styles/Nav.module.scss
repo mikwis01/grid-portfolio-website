@@ -1,0 +1,138 @@
+@import '../styles/variables.scss';
+
+@keyframes onLoad {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.container {
+	width: 100%;
+	min-height: 7rem;
+	display: flex;
+	border-bottom: 1px solid $border-color;
+	animation: onLoad 0.5s;
+
+	@include rwd-max-width(768) {
+		flex-direction: column;
+		min-height: 7.5rem;
+	}
+}
+
+.socials,
+.contact {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex: 1.2;
+	border-right: 1px solid $border-color;
+	margin-left: 1px;
+
+	@include rwd-max-width(768) {
+		display: none;
+	}
+}
+
+.logo > svg {
+	margin-left: 4rem;
+}
+
+.whoami {
+	flex: 0.8;
+	border-right: 1px solid $border-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 0.2rem;
+
+	@include rwd-max-width(768) {
+		gap: 0;
+		flex: 1;
+		justify-content: flex-end;
+	}
+}
+
+.whoami p {
+	margin: 0;
+}
+
+.whoami > p:nth-child(1) {
+	font-weight: 700;
+}
+
+.whoami > p:nth-child(2) {
+	font-size: 0.75rem;
+}
+
+.socials {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	flex: 0.5;
+	border-right: 1px solid $border-color;
+
+	@include rwd-max-width(868) {
+		gap: 2rem;
+	}
+
+	@include rwd-max-width(768) {
+		flex: 1;
+	}
+}
+
+.socials li {
+	transition: all 0.2s ease-in-out;
+}
+
+.socials li:nth-child(3) {
+	display: none;
+
+	@include rwd-max-width(768) {
+		display: block;
+	}
+}
+
+.socials li:hover {
+	color: $hover-font-color;
+}
+
+.contact {
+	flex: 0.5;
+
+	@include rwd-max-width(768) {
+		display: none;
+	}
+}
+
+.contact a {
+	font-weight: 700;
+	transition: all 0.2s ease-in-out;
+}
+
+.contact a:hover {
+	color: $hover-font-color;
+}
+
+.eyeball {
+	background-image: url('../assets/eye.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 7px;
+	height: 12px;
+	position: absolute;
+	top: 51px;
+	left: 85px;
+}

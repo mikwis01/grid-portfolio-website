@@ -114,7 +114,7 @@ const MainSection = () => {
 				<div
 					className={`${styles.project_description} ${styles.slide_section}`}>
 					<p>
-						Chatly is a messenger "clone" desktop web app.
+						Chatly is a messenger &quot;clone&quot; desktop web app.
 						<br />
 						<br />I created this website using React and Firebase. I
 						used Context API for my state manager.

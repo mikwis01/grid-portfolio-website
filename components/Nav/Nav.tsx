@@ -26,7 +26,7 @@ export const Nav = () => {
       <ul className={styles.socials}>
         {SOCIAL_LINKS.map((link) => (
           <li key={link.href}>
-            <a target="_blank" rel="noreferrer">
+            <a target="_blank" rel="noreferrer" href={link.href}>
               {link.child}
             </a>
           </li>

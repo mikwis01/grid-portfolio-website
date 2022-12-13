@@ -1,0 +1,65 @@
+@import '../styles/variables.scss';
+
+.project_title {
+  grid-area: title;
+  border-right: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  @include rwd-max-width(968) {
+    border-right: none;
+    border-bottom: 1px solid $border-color;
+  }
+
+  @include rwd-max-width(768) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  @include rwd-max-width(568) {
+    padding: 1rem 0;
+  }
+
+  @include rwd-max-height(600) {
+    padding: 1rem 0;
+  }
+}
+
+.project_title:hover {
+  background-color: $hover-background-color;
+}
+
+.project_title h2 {
+  margin: 0 0 0 4rem;
+  font-size: 3rem;
+  font-weight: 900;
+  transition: transform 0.2s ease-in-out;
+  width: 50%;
+
+  @include rwd-min-width(1600) {
+    font-size: 3.5rem;
+  }
+
+  @include rwd-max-width(968) {
+    width: 100%;
+    margin: 0 4rem 0 4rem;
+    font-size: 2.5rem;
+    width: 80%;
+  }
+
+  @include rwd-max-width(768) {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  @include rwd-max-width(568) {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+}
+
+.project_title:hover h2 {
+  transform: scale(1.05);
+}

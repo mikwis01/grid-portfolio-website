@@ -1,0 +1,14 @@
+@import '../styles/variables.scss';
+
+.project_photo {
+  border-right: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  grid-area: photo;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include rwd-max-height(600) {
+    min-height: 10rem;
+  }
+}

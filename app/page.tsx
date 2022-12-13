@@ -1,5 +1,5 @@
-import Nav from '../components/Nav'
-import MainSection from '../components/MainSection'
+import { Nav } from '../components/Nav/Nav'
+import { MainSection } from '../components/MainSection/MainSection'
 
 const page = () => {
 	return (

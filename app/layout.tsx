@@ -15,7 +15,7 @@ export default function RootLayout({
 				/>
 				<meta
 					name="description"
-					content="Hi, im Mikołaj - front end developer based in Bydgoszcz, Poland."
+					content="Hi, im Mikołaj - front end developer based in Poznań, Poland."
 				/>
 				<title>Mikołaj Wiśniewski | Front-end developer</title>
 			</head>

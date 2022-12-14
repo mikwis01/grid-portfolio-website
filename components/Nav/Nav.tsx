@@ -1,6 +1,7 @@
 'use client'
 
 import { useMouseMove } from './useMouseMove'
+import Link from 'next/link'
 import { useRef } from 'react'
 import { SOCIAL_LINKS } from './constants'
 import { NavEye } from '../NavEye/NavEye'
@@ -26,14 +27,14 @@ export const Nav = () => {
       <ul className={styles.socials}>
         {SOCIAL_LINKS.map((link) => (
           <li key={link.href}>
-            <a target="_blank" rel="noreferrer" href={link.href}>
+            <Link target="_blank" rel="noreferrer" href={link.href}>
               {link.child}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
       <div className={styles.contact}>
-        <a href="mailto:mikolajwisniewski01@gmail.com">CONTACT ME</a>
+        <Link href="mailto:mikolajwisniewski01@gmail.com">CONTACT ME</Link>
       </div>
     </nav>
   )
